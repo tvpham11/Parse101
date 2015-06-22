@@ -1,5 +1,8 @@
-console.log('This is cool!');
+;(function () {
 
-$('.container').html(template.example({
-  value: 'Hello, World!!'
-}));
+  'use strict';
+  $.getJSON(app.rootURL + 'users/me').done(function(data) {
+    console.log(data);
+  });
+
+}());
